@@ -1,10 +1,22 @@
 {% extends "core/base.html" %}
 {% load static %}
 {% block content %}
-<script>
-    AOS.init({
-      duration: 1200,
-    })
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Home",
+    "item": "http://carnival.mbhs.edu/"
+  },{
+    "@type": "ListItem",
+    "position": 2,
+    "name": "About",
+    "item": "http://carnival.mbhs.edu/about/"
+  }]
+}
 </script>
 <div id="about-page">
     <div class="carousel-container">
@@ -12,49 +24,67 @@
     </div>
     <div class="container">
         <div class="row" style="margin-bottom:3em;">
-            <div class="col-sm-7">
-                <div class="row mb-3" data-aos="fade-up">
-                    <div class="card carnival-card">
-                        <div class="card-header text-center">
-                            The Piece
+            <div class="col">
+                <div class="card raffle-card">
+                            <div class="card-header text-center">
+
+                                <h4 class="card-title my-auto"><span class="badge badge-pill badge-light">New This Year!</span> Orff Instruments</h4>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text text-center">
+                                    Orff Group Drumming Lesson for kids 7 and up! Offered at 1:30 and 3:15.
+                                </p>
+                            </div>
                         </div>
-                        <div class="card-body">
-                            <h4 class="card-title">Carnival of the Animals</h4>
-                            <p class="card-text">
-                                <i>The Carnival of the Animals</i> is a humorous musical suite of fourteen movements
-                                by the French Romantic composer Camille Saint-Saëns. <br><i>The Carnival of the Animals</i>
-                                 is supposed to be fun. Each of the suite's 14 movements introduces us
-                                to a different animal or group of animals, with a small number of instruments
-                                 mimicking their voices or the way they move. Starting with the lion's roar and
-                                 slowing to reflect the elephant's bulk, Saint-Saens pokes fun at the music of his time.
-                                 <br>The piece has become one of Saint-Saëns's best-known works.
-                            </p>
-                            <a href="https://www.classicalmpr.org/story/2015/06/29/carnival-of-the-animals-saint-saens" target="_blank" class="btn btn-outline-light">More About The Piece</a>
-                            <a href="https://www.youtube.com/watch?v=poz9nZCFmb0" target="_blank" class="btn btn-outline-light">A beautiful animation prefaced by the voice of Darth Vader!</a>
-                            <a href="https://www.youtube.com/watch?v=iHo-pFUE0so" target="_blank" class="btn btn-outline-light">Another beautiful rendtion with: Bugs and Daffy</a>
-                            <a href="https://www.youtube.com/watch?v=3V_YMzlVbC8" target="_blank" class="btn btn-outline-light">The Finale performed by our own Chamber Orchestra</a>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom:3em;">
+            <div class="col-md-7">
+                <div class="row mb-3">
+                    <div class="col">
+                        <div class="card carnival-card">
+                            <div class="card-header text-center">
+                                <h4 class="card-title my-auto">The Piece</h4>
+                            </div>
+                            <div class="card-body">
+
+                                <p class="card-text">
+                                    <i>The Carnival of the Animals</i> is a humorous musical suite of fourteen movements
+                                    by the French Romantic composer Camille Saint-Saëns. <br><i>The Carnival of the Animals</i>
+                                     is supposed to be fun. Each of the suite's 14 movements introduces us
+                                    to a different animal or group of animals, with a small number of instruments
+                                     mimicking their voices or the way they move. Starting with the lion's roar and
+                                     slowing to reflect the elephant's bulk, Saint-Saens pokes fun at the music of his time.
+                                     <br>The piece has become one of Saint-Saëns's best-known works.
+                                </p>
+                                <a href="https://www.classicalmpr.org/story/2015/06/29/carnival-of-the-animals-saint-saens" target="_blank" class="btn">More About The Piece</a>
+                                <a href="https://www.youtube.com/watch?v=poz9nZCFmb0" target="_blank" class="btn">A beautiful animation prefaced by the voice of Darth Vader!</a>
+                                <a href="https://www.youtube.com/watch?v=iHo-pFUE0so" target="_blank" class="btn">A rendition with Bugs and Daffy</a>
+                                <a href="https://www.youtube.com/watch?v=3V_YMzlVbC8" target="_blank" class="btn">The Finale performed by our own Chamber Orchestra</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="row" data-aos="fade-up">
-                    <div class="card carnival-blurb-card">
-                        <div class="card-body">
-                            <p class="card-text">
-                                The Outstanding Blair Chamber Orchestra will play the piece,
-                                accompanied by a simultaneously running video for young children linking the
-                                instruments and animals.
-                            </p>
+                <div class="row">
+                    <div class="col">
+                        <div class="card carnival-blurb-card">
+                            <div class="card-body">
+                                <p class="card-text">
+                                    The Outstanding Blair Chamber Orchestra will play the piece,
+                                    accompanied by a simultaneously running video for young children linking the
+                                    instruments and animals.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-5 pr-0" data-aos="fade-up">
+            <div class="col-md-5">
                 <div class="card h-100 instrument-card">
                     <div class="card-header text-center">
-                        Event
+                        <h4 class="card-title my-auto my-auto">Instrument Petting Zoo</h4>
                     </div>
-                    <div class="card-body text-right">
-                        <h4 class="card-title">Instrument Petting Zoo</h4>
+                    <div class="card-body">
                         <p class="card-text">
                             Member of Blair Bands and Orchestras will be on hand with their instruments so
                             kids can see them, learn about them, and can try them out.
@@ -73,16 +103,15 @@
         </div> <!-- FIRST ROW -->
 
         <div class="row" style="margin-bottom:3em;">
-            <div class="col-sm-5 pl-0" data-aos="fade-up">
-                <div class="card h-100 arts-crafts-card">
+            <div class="col-md-5">
+                <div class="card h-100 arts-crafts-card"  data-aos="fade-up">
                     <div class="card-header text-center">
-                        Event
+                        <h4 class="card-title my-auto">Arts and Crafts</h4>
                     </div>
                     <div class="card-body">
                         <img class="py-3 d-inline-block ml-auto" src="{% static 'core/img/icon/scissors.svg' %}" alt="cupcake.svg" style="width:100px;height:100px;">
                         <img class="py-3 d-inline-block ml-auto" src="{% static 'core/img/icon/crayons.svg' %}" alt="cupcake.svg" style="width:100px;height:100px;">
                         <img class="py-3 d-inline-block ml-auto" src="{% static 'core/img/icon/origami.svg' %}" alt="cupcake.svg" style="width:100px;height:100px;">
-                        <h4 class="card-title">Arts and Crafts</h4>
                         <p class="card-text">
                             We will have several stations featuring:
                         </p>
@@ -100,41 +129,43 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-7">
-                <div class="row mb-3" data-aos="fade-up">
-                    <div class="card face-painting-card">
-                        <div class="card-header text-center ">
-                            Event
-                        </div>
-                        <div class="card-body text-right">
-                            <img class="py-3 d-inline-block mr-auto" src="{% static 'core/img/icon/painting-palette.svg' %}" alt="cupcake.svg" style="width:100px;height:100px;">
-                            <img class="py-3 d-inline-block mr-auto" src="{% static 'core/img/icon/paint.svg' %}" alt="cupcake.svg" style="width:100px;height:100px;">
-                            <img class="py-3 d-inline-block mr-auto" src="{% static 'core/img/icon/artist.svg' %}" alt="cupcake.svg" style="width:100px;height:100px;">
-                            <h4 class="card-title">Face Painting</h4>
-                            <p class="card-text">
-                                The festival will feature face-painting, allowing your child to express their creativity
-                                in a fun and delightful manner! All materials are 100% safe and we will have trained
-                                volunteers on-hand for assistance.
-                            </p>
+            <div class="col-md-7">
+                <div class="row mb-3">
+                    <div class="col">
+                        <div class="card face-painting-card" data-aos="fade-up">
+                            <div class="card-header text-center ">
+                                <h4 class="card-title my-auto">Face Painting</h4>
+                            </div>
+                            <div class="card-body">
+                                <img class="py-3 d-inline-block mr-auto" src="{% static 'core/img/icon/painting-palette.svg' %}" alt="cupcake.svg" style="width:100px;height:100px;">
+                                <img class="py-3 d-inline-block mr-auto" src="{% static 'core/img/icon/paint.svg' %}" alt="cupcake.svg" style="width:100px;height:100px;">
+                                <img class="py-3 d-inline-block mr-auto" src="{% static 'core/img/icon/artist.svg' %}" alt="cupcake.svg" style="width:100px;height:100px;">
+                                <p class="card-text">
+                                    The festival will feature face-painting, allowing your child to express their creativity
+                                    in a fun and delightful manner! All materials are 100% safe and we will have trained
+                                    volunteers on-hand for assistance.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="row" data-aos="fade-up">
-                    <div class="card cupcake-walk-card">
-                        <div class="card-header text-center">
-                            Event
-                        </div>
-                        <div class="card-body text-right">
-                            <img class="py-3 d-inline-block ml-auto" src="{% static 'core/img/icon/cupcake.svg' %}" alt="cupcake.svg" style="width:100px;height:100px;">
-                            <img class="py-3 d-inline-block ml-auto" src="{% static 'core/img/icon/cupcake-2.svg' %}" alt="cupcake.svg" style="width:100px;height:100px;">
-                            <img class="py-3 d-inline-block ml-auto" src="{% static 'core/img/icon/cupcake-3.svg' %}" alt="cupcake.svg" style="width:100px;height:100px;">
-                            <h4 class="card-title">Cupcake Walk</h4>
-                            <p class="card-text">
-                                Don't miss the chance to win a cupcake! The game begins when the music starts; children
-                                walk around in a circle as the music is playing. When the music stops, the
-                                children stop. A volunteer will pull out a number from a hat and the child
-                                standing at the number wins a cupcake!
-                            </p>
+                <div class="row">
+                    <div class="col">
+                        <div class="card cupcake-walk-card" data-aos="fade-up">
+                            <div class="card-header text-center">
+                                <h4 class="card-title my-auto">Cupcake Walk</h4>
+                            </div>
+                            <div class="card-body">
+                                <img class="py-3 d-inline-block ml-auto" src="{% static 'core/img/icon/cupcake.svg' %}" alt="cupcake.svg" style="width:100px;height:100px;">
+                                <img class="py-3 d-inline-block ml-auto" src="{% static 'core/img/icon/cupcake-2.svg' %}" alt="cupcake.svg" style="width:100px;height:100px;">
+                                <img class="py-3 d-inline-block ml-auto" src="{% static 'core/img/icon/cupcake-3.svg' %}" alt="cupcake.svg" style="width:100px;height:100px;">
+                                <p class="card-text">
+                                    Don't miss the chance to win a cupcake! The game begins when the music starts; children
+                                    walk around in a circle as the music is playing. When the music stops, the
+                                    children stop. A volunteer will call out a carnival image and the child
+                                    standing on the corresponding image wins a cupcake!
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -142,81 +173,74 @@
         </div> <!-- END ROW DESC 2 -->
 
         <div class="row" style="margin-bottom:3em;">
-            <div class="col-sm-6 pl-0" data-aos="fade-up">
-                <div class="card h-100 raffle-card">
+            <div class="col-md-6">
+                <div class="card h-100 raffle-card" data-aos="fade-up">
                     <div class="card-header text-center">
-                        Event
+                        <h4 class="card-title my-auto">Raffle</h4>
                     </div>
                     <div class="card-body">
-                        <h4 class="card-title">Raffle</h4>
                         <p class="card-text">
-                            The raffle will be called twice; at 11:15 and 12:30. Prizes include:
+                            The raffle will be called after each orchestra performance. Prizes may include:
                         </p>
                         <ul class="card-text">
-                            <li>Books (with CDs) of the Carnival of the Animals</li>
-                            <li>Animal origami book</li>
-                            <li>Djembe from House of Musical Traditions</li>
-                            <li>Ukelele  from House of Musical Traditions</li>
-                            <li>2, 30-minute music lessons at the International School of Music. </li>
-                            <li>$100 off a week of summer camp at Highwood Theatre</li>
-                            <li>A FREE week of summer camp at Roundhouse Theatre</li>
+                            <li>Books</li>
+                            <li>Instruments</li>
+                            <li>Music lessons</li>
+                            <li>Camp registration</li>
                         </ul>
                         <img class="py-3 d-inline-block ml-auto" src="{% static 'core/img/icon/ukulele.svg' %}" alt="cupcake.svg" style="width:120px;height:120px;">
                         <img class="py-3 d-inline-block ml-auto" src="{% static 'core/img/icon/musical-notes-symbols.svg' %}" alt="cupcake.svg" style="width:120px;height:120px;">
-                        <img class="py-3 d-inline-block ml-auto" src="{% static 'core/img/background/round-house-theatre.png' %}" alt="theatre.png" style="height:120px;">
+
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6">
+            <div class="col-md-6">
                 <div class="row mb-3" data-aos="fade-up">
-                    <div class="card bake-sale-card">
-                        <div class="card-header text-center">
-                            Event
-                        </div>
-                        <div class="card-body text-right">
-                            <img class="py-3 d-inline-block ml-auto" src="{% static 'core/img/icon/cookie.svg' %}" alt="cupcake.svg" style="width:100px;height:100px;">
-                            <img class="py-3 d-inline-block ml-auto" src="{% static 'core/img/icon/muffin.svg' %}" alt="cupcake.svg" style="width:100px;height:100px;">
-                            <img class="py-3 d-inline-block ml-auto" src="{% static 'core/img/icon/brownie.svg' %}" alt="cupcake.svg" style="width:100px;height:100px;">
-                            <img class="py-3 d-inline-block ml-auto" src="{% static 'core/img/icon/cookies.svg' %}" alt="cupcake.svg" style="width:100px;height:100px;">
-
-                            <h4 class="card-title">Bake Sale</h4>
-                            <p class="card-text">
-                                We will be holding a bake sale throughout the event. Buy baked goods such as
-                                brownies, cookies, cupcakes, and more! All proceeds go towards funding
-                                Blair Music and help support events such as this one.
-                            </p>
+                    <div class="col">
+                        <div class="card bake-sale-card">
+                            <div class="card-header text-center">
+                                <h4 class="card-title my-auto">Bake Sale</h4>
+                            </div>
+                            <div class="card-body">
+                                <img class="py-3 d-inline-block ml-auto" src="{% static 'core/img/icon/cookie.svg' %}" alt="cupcake.svg" style="width:100px;height:100px;">
+                                <img class="py-3 d-inline-block ml-auto" src="{% static 'core/img/icon/muffin.svg' %}" alt="cupcake.svg" style="width:100px;height:100px;">
+                                <img class="py-3 d-inline-block ml-auto" src="{% static 'core/img/icon/brownie.svg' %}" alt="cupcake.svg" style="width:100px;height:100px;">
+                                <img class="py-3 d-inline-block ml-auto" src="{% static 'core/img/icon/cookies.svg' %}" alt="cupcake.svg" style="width:100px;height:100px;">
+                                <p class="card-text">
+                                    We will be holding a bake sale throughout the event. Buy baked goods such as
+                                    brownies, cookies, cupcakes, and more! All proceeds go towards funding
+                                    Blair Music and help support events such as this one.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="row item" data-aos="fade-up">
-                    <div class="card marching-band-card">
-                        <div class="card-header text-center">
-                            Event
-                        </div>
-                        <div class="card-body text-right">
-                            <h4 class="card-title">Marching Band</h4>
-                            <p class="card-text">
-                                The festival will also feature the MBHS Marching Band
-                                showcase and two fifteen minute performances at 10:15 and 11:30.
-                                Make sure you catch them!
-                            </p>
+                <div class="row item">
+                    <div class="col">
+                        <div class="card marching-band-card" data-aos="fade-up">
+                            <div class="card-header text-center">
+                                <h4 class="card-title my-auto">Marching Band</h4>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">
+                                    The festival will also feature the MBHS Marching Band
+                                    showcase and two fifteen minute performances at 1:15 and 2:30.
+                                    Make sure you catch them!
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div> <!-- EVENT DESC CONTAINER -->
-
-    <div class="container directions-card mb-3">
-        <h1 class="about-cards-title my-4 text-center">Directions</h1>
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card directions-card-card">
+        <div class="row" data-aos="fade-up">
+            <div class="col-md-12">
+                <h1 class="about-cards-title my-4 text-center">Directions</h1>
+                <div class="card directions-card">
                     <div class="card-header text-center">
-                        getting to the school
+                        <h4 class="card-title my-auto">Getting here</h4>
                     </div>
-                    <div class="card-body">
-                        <h4 class="card-title">Getting here</h4>
+                    <div class="card-body"> 
                         <p class="card-text">
                             Montgomery Blair HS is located on 51 University Boulevard E, in Silver Spring, MD.
                             There are two parking lots you can use: one is on University Blvd and the other is
@@ -227,18 +251,14 @@
                 </div>
             </div>
         </div>
-    </div>
-
-    <div class="container bbop-card mb-3">
-        <h1 class="about-cards-title my-4 text-center">Special Thanks To</h1>
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card bbop-card-card">
+        <div class="row" data-aos="fade-up">
+            <div class="col-md-12">
+                <h1 class="about-cards-title my-4 text-center">Special Thanks To</h1>
+                <div class="card bbop-card">
                     <div class="card-header text-center">
-                        BBOPS
+                        <h4 class="card-title my-auto">Blair Band and Orchestra Patrons</h4>
                     </div>
                     <div class="card-body">
-                        <h4 class="card-title">Blair Band and Orchestra Patrons</h4>
                         <p class="card-text">
                             The Blair Band and Orchestra Patrons (or BBOPS) is
                             the booster organization that supports Montgomery Blair
@@ -246,11 +266,11 @@
                             made up of parents of instrumental music students and their
                             support is invaluable.
                         </p>
-                        <a href="http://www.mbhsmusic.com/bbops.html" target="_blank" class="btn btn-outline-light">Learn More</a>
+                        <a href="http://www.mbhsmusic.com/bbops.html" target="_blank" class="btn">Learn More</a>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div> <!-- EVENT DESC CONTAINER -->
 </div>
 {% endblock %}

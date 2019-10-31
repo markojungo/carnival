@@ -6,6 +6,23 @@
             duration: 1200,
         })
     </script>
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "http://carnival.mbhs.edu/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Español",
+        "item": "http://carnival.mbhs.edu/espanol/"
+      }]
+    }
+    </script>
     <style>
         .card-header {
             background-color: #A52814;
@@ -31,18 +48,19 @@
                         Español
                     </div>
                     <div class="card-body">
+                        <!--<p class="card-text">Esta página se actualizará en enero. Véase más adelante el volante del año pasado.</p>
                         <p class="card-text">Habrá voluntarios y estudiantes que hablan español gustosos de ayudarles a disfrutar de este divertido Festival</p>
                         <p class="card-text">¡No se lo pierda!</p>
                         <a class="btn btn-block btn-large btn-outline-light mx-auto py-4 mb-4" target="_blank" href="https://blairmusic.ticketleap.com/carnival/" role="button">Entradas
                             <span class="text-muted d-block">efectivo solo en la puerta</span>
-                        </a>
+                        </a>-->
                         <div class="embed-responsive embed-responsive-210by297">
-                            <embed class="embed-responsive-item" src="{% static 'espanol.pdf' %}">
+                            <embed class="embed-responsive-item" src="{% static 'espanol2019.pdf' %}">
                             </embed>
                         </div>
-                        <a class="btn btn-block btn-large btn-outline-light mx-auto py-4 mt-4" target="_blank" href="https://blairmusic.ticketleap.com/carnival/" role="button">Entradas
+                        <!--<a class="btn btn-block btn-large btn-outline-light mx-auto py-4 mt-4" target="_blank" href="https://blairmusic.ticketleap.com/carnival/" role="button">Entradas
                             <span class="text-muted d-block">efectivo solo en la puerta</span>
-                        </a>
+                        </a>-->
                     </div>
                 </div></div>
             </div>

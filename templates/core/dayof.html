@@ -1,0 +1,41 @@
+{% extends "core/base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+    <div class="container" id="dayof">
+    {% if success %} <div class="alert alert-success" role="alert">Success!</div> {% endif %}
+        <div class="row">
+            <div class="col-md">
+                <h1 class="dayof-cards-title my-4 text-center">Thanks for Coming!</h1>
+                <div class="card">
+                    <div class="card-header">
+                        <h1 class="card-title">Submit Photos</h1>
+                    </div>
+                    <div class="card-body">
+                        <p>Click "Upload Pictures," select as many pictures as you want, then click "Submit."</p>
+                        <form enctype="multipart/form-data" action="{% url 'dayof' %}" method="post">
+                            {% csrf_token %}
+                            {{ form|crispy }}
+                            <label for="id_picture" class="btn">
+                                Upload Pictures
+                            </label>
+                            <p>By clicking "Submit," I give permission to Montgomery Blair Instrumental Music to use the submitted photos in promotional materials.</p>
+                            <input type="submit" value="Submit" class="btn ">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="col-md">
+                <div class="card h-100">
+                    <div class="card-header">
+                        <h1 class="card-title">Map</h1>
+                    </div>
+                    <div class="card-body">
+                        <a href="{% static 'core/img/background/map.png' %}" target="_blank" class="btn">Click for the event map</a>
+                    </div>
+                </div>
+            </div>-->
+        </div>
+    </div>
+{% endblock %}
